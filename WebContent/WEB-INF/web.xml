@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	version="3.0">
+	<display-name>stpj</display-name>
+	<welcome-file-list>
+		<welcome-file>main.jsp</welcome-file>
+
+	</welcome-file-list>
+
+	<context-param>
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://localhost:3306</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>user</param-name>
+		<param-value>root</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>abcd</param-value>
+	</context-param>
+	
+	
+	<servlet>
+	<servlet-name>main</servlet-name>
+	<servlet-class>content.MainPage</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>main</servlet-name>
+	<url-pattern>/type</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>adding</servlet-name>
+	<servlet-class>content.AddItem</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+	<servlet-name>adding</servlet-name>
+	<url-pattern>/add</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>update</servlet-name>
+	<servlet-class>content.UpdateItem</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>update</servlet-name>
+	<url-pattern>/upd</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>delete</servlet-name>
+	<servlet-class>content.DeleteItem</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>delete</servlet-name>
+	<url-pattern>/del</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+	<servlet-name>ord</servlet-name>
+	<servlet-class>content.OrderItem</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	<servlet-name>ord</servlet-name>
+	<url-pattern>/pur</url-pattern>
+	</servlet-mapping>
+</web-app>
